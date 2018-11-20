@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="745.0" prefWidth="1193.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pdftopng.FXMLDocumentController">
+    <children>
+        
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <BorderPane prefHeight="739.0" prefWidth="1193.0">
+         <top>
+            <Accordion prefHeight="739.0" prefWidth="863.0" BorderPane.alignment="CENTER">
+              <panes>
+                <TitledPane animated="false" prefHeight="355.0" prefWidth="530.0" text="Create Exam">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                                <Button fx:id="chooseExamPdfBtn" layoutX="405.0" layoutY="245.0" prefHeight="124.0" prefWidth="344.0" text="Choose PDF">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font></Button>
+                              <Button fx:id="choosePngPathBtn" layoutX="407.0" layoutY="111.0" prefHeight="119.0" prefWidth="340.0" text="Choose PNG Path">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font></Button>
+                              <Button fx:id="QRreader" layoutX="405.0" layoutY="394.0" prefHeight="133.0" prefWidth="348.0" text="QR">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font></Button>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" prefHeight="379.0" prefWidth="530.0" text="Read Exam">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="imagepane" fitHeight="517.0" fitWidth="829.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label layoutX="884.0" layoutY="75.0" text="Student Name" />
+                              <Label fx:id="namelabel" layoutX="994.0" layoutY="75.0" />
+                              <Label layoutX="884.0" layoutY="106.0" text="Student ID" />
+                              <Label fx:id="idlabel" layoutX="994.0" layoutY="106.0" />
+                              <Label layoutX="886.0" layoutY="147.0" text="Answer of the" />
+                              <Label fx:id="answerlabel" layoutX="994.0" layoutY="147.0" />
+                              <TextField fx:id="questionfield" layoutX="900.0" layoutY="567.0" />
+                              <TextArea fx:id="comment" layoutX="26.0" layoutY="550.0" prefHeight="107.0" prefWidth="291.0" />
+                              <Label layoutX="933.0" layoutY="504.0" text="Question Grade" />
+                              <Button fx:id="backbutton" layoutX="903.0" layoutY="615.0" mnemonicParsing="false" text="Back" />
+                              <Button fx:id="nextbutton" layoutX="961.0" layoutY="615.0" mnemonicParsing="false" text="Next" />
+                              <Label fx:id="errorlabel" layoutX="930.0" layoutY="533.0" textFill="RED" />
+                              <Button fx:id="savebutton" layoutX="1017.0" layoutY="615.0" mnemonicParsing="false" text="Save" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                  <TitledPane animated="false" text="Error Pages">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="errorimage" fitHeight="518.0" fitWidth="834.0" layoutX="6.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" />
+                              <TextField fx:id="studentname" layoutX="899.0" layoutY="178.0" />
+                              <Label layoutX="903.0" layoutY="138.0" text="Enter Name of the Student" />
+                              <Label layoutX="937.0" layoutY="228.0" text="Total Grade" />
+                              <TextField fx:id="totalgrade" layoutX="896.0" layoutY="268.0" />
+                              <Button fx:id="errornext" layoutX="1003.0" layoutY="455.0" mnemonicParsing="false" text="Next" />
+                              <Button fx:id="errorback" layoutX="896.0" layoutY="455.0" mnemonicParsing="false" text="Back" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+              </panes>
+            </Accordion>
+         </top>
+      </BorderPane>
+    </children>
+</AnchorPane>
